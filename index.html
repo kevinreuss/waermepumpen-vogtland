@@ -3,763 +3,984 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wärmepumpen Vogtland — Ihr regionaler Ansprechpartner</title>
+    <title>
+      Wärmepumpen Vogtland – Beratung & Förderung sichern (bis zu 15.000 €)
+    </title>
     <meta
       name="description"
-      content="Wärmepumpen Vogtland: Regionale Beratung, fördersichere Planung und schnelle Einschätzung zu Machbarkeit & Zuschüssen. Kostenloses Erstgespräch – nur für das Vogtland (PLZ 08***)."
+      content="Regionale Wärmepumpen‑Beratung im Vogtland. Kostenfreie Erstberatung vor Ort. Wir übernehmen die Förderanträge (bis zu 15.000 € möglich). Jetzt Rückruf anfordern."
     />
-    <meta name="robots" content="index,follow" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Wärmepumpen Vogtland" />
+    <meta
+      property="og:title"
+      content="Wärmepumpen Vogtland – Beratung & Förderung sichern"
+    />
     <meta
       property="og:description"
-      content="Regionale Beratung, fördersichere Planung & Installation. Kostenloses Erstgespräch – nur für das Vogtland (PLZ 08***)."
+      content="Kostenfreie Erstberatung vor Ort. Wir kümmern uns um die Förderung (bis zu 15.000 € möglich)."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23f7fbfc'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23008476' font-family='Inter,Arial' font-size='64' letter-spacing='1.5'%3EW%C3%A4rmepumpen Vogtland%3C/text%3E%3C/svg%3E"
-    />
     <meta property="og:locale" content="de_DE" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <meta property="og:url" content="" />
     <style>
       :root {
-        --bg: #f7fbfc;
-        --surface: #ffffff;
-        --muted: #5f757b;
-        --text: #0f2328;
-        --accent: #00d1b7;
-        --accent-2: #00a58f;
-        --danger: #e11d48;
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --brand: #58d38c;
+        --txt: #0b1220;
+        --muted: #5b6b82;
+        --accent: #4fb0ff;
+        --danger: #ff5c7a;
         --ok: #16a34a;
-        --line: rgba(15, 35, 40, 0.08);
-        --shadow: 0 12px 36px rgba(2, 20, 22, 0.08);
+        --shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
         --radius: 16px;
+        --radius-sm: 12px;
+        --radius-lg: 26px;
+        --max: 1100px;
+        /* theme helpers */
+        --border: rgba(0, 0, 0, 0.1);
+        --surface: rgba(0, 0, 0, 0.03);
+        --input-bg: #ffffff;
+        --page-bg: linear-gradient(180deg, #f5f7fb, #eef2f8);
+        --card-bg: #ffffff;
+        --illus-bg: radial-gradient(
+            180px 100px at 20% 10%,
+            rgba(79, 176, 255, 0.12),
+            transparent 60%
+          ),
+          radial-gradient(
+            260px 180px at 80% 20%,
+            rgba(88, 211, 140, 0.12),
+            transparent 60%
+          ),
+          linear-gradient(160deg, #e8eef7 0%, #f5f7fb 70%);
+        --sticky-bg: linear-gradient(
+          180deg,
+          rgba(245, 247, 251, 0),
+          rgba(245, 247, 251, 0.75) 20%,
+          rgba(245, 247, 251, 0.95)
+        );
       }
-      * {
-        box-sizing: border-box;
+
+      [data-theme="dark"] {
+        --bg: #0b1220; /* dunkles Blau für Kontrast */
+        --card: #0f1a33; /* etwas heller für Cards */
+        --brand: #58d38c; /* grün = Energie/Vertrauen */
+        --txt: #e9eef7; /* fast weiß */
+        --muted: #9fb0c7; /* Sekundärtext */
+        --accent: #4fb0ff; /* sekundärer Akzent */
+        --danger: #ff5c7a; /* Fehlerfarbe */
+        --ok: #67e8a5; /* Erfolg */
+        --shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+        --border: rgba(255, 255, 255, 0.08);
+        --surface: rgba(255, 255, 255, 0.04);
+        --input-bg: rgba(255, 255, 255, 0.03);
+        --page-bg: radial-gradient(
+            1200px 600px at 80% -10%,
+            rgba(88, 211, 140, 0.12),
+            transparent 60%
+          ),
+          var(--bg);
+        --card-bg: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.06),
+          rgba(255, 255, 255, 0.02)
+        );
+        --illus-bg: radial-gradient(
+            180px 100px at 20% 10%,
+            rgba(79, 176, 255, 0.15),
+            transparent 60%
+          ),
+          radial-gradient(
+            260px 180px at 80% 20%,
+            rgba(88, 211, 140, 0.16),
+            transparent 60%
+          ),
+          linear-gradient(160deg, #0b162c 0%, #0e1d38 70%);
+        --sticky-bg: linear-gradient(
+          180deg,
+          rgba(11, 18, 32, 0),
+          rgba(11, 18, 32, 0.75) 20%,
+          rgba(11, 18, 32, 0.95)
+        );
       }
       html,
       body {
         margin: 0;
         padding: 0;
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
-          sans-serif;
-        background: var(--bg);
-        color: var(--text);
+        background: var(--page-bg);
+        color: var(--txt);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.55;
       }
       a {
-        color: var(--accent-2);
+        color: var(--brand);
         text-decoration: none;
       }
       a:hover {
         text-decoration: underline;
       }
-
       .container {
-        width: min(980px, 92vw);
-        margin: 0 auto;
+        max-width: var(--max);
+        margin-inline: auto;
+        padding: clamp(16px, 2.5vw, 28px);
       }
-
-      .topbar {
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: white;
-        font-weight: 700;
-        text-align: center;
-        padding: 10px 14px;
-        font-size: 14px;
+      .grid {
+        display: grid;
+        gap: clamp(16px, 2vw, 24px);
       }
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 30;
-        backdrop-filter: saturate(140%) blur(8px);
-        background: rgba(255, 255, 255, 0.7);
-        border-bottom: 1px solid var(--line);
-      }
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        padding: 14px 0;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-      }
-      .logo {
-        width: 36px;
-        height: 36px;
-        border-radius: 10px;
-        background: radial-gradient(
-          120% 120% at 20% 20%,
-          #6af6e3,
-          #1db8a3 60%,
-          #07927f
-        );
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06), var(--shadow);
-        position: relative;
-      }
-      .logo:after {
-        content: "";
-        position: absolute;
-        inset: 7px;
-        border-radius: 8px;
-        background: conic-gradient(
-          from 90deg at 60% 40%,
-          rgba(255, 255, 255, 0.5),
-          rgba(255, 255, 255, 0) 40%
-        );
-      }
-      .brand span {
-        font-size: 17px;
-      }
-      .cta-header {
-        display: none;
-      }
-      @media (min-width: 720px) {
-        .cta-header {
-          display: inline-flex;
-        }
-      }
-
       .btn {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        padding: 12px 18px;
-        border-radius: 100px;
-        border: 1px solid var(--line);
-        background: linear-gradient(
-          180deg,
-          rgba(0, 165, 143, 0.08),
-          rgba(0, 165, 143, 0.04)
-        );
-        color: var(--text);
-        font-weight: 600;
+        justify-content: center;
+        gap: 0.6rem;
+        background: var(--brand);
+        color: #042815;
+        padding: 0.95rem 1.1rem;
+        border-radius: 12px;
+        font-weight: 700;
+        border: 0;
         cursor: pointer;
-        transition: 0.2s transform ease;
-        box-shadow: 0 6px 18px rgba(0, 165, 143, 0.12);
+        box-shadow: var(--shadow);
+        transition: transform 0.08s ease, filter 0.15s ease;
       }
       .btn:hover {
-        transform: translateY(-1px);
+        filter: brightness(1.05);
       }
-      .btn-primary {
-        background: linear-gradient(180deg, var(--accent), var(--accent-2));
-        color: #04211f;
-        border-color: transparent;
-        box-shadow: 0 12px 30px rgba(0, 165, 143, 0.25);
+      .btn:active {
+        transform: translateY(1px);
       }
-
-      .hero {
-        position: relative;
-        padding: 46px 0 20px;
-        overflow: hidden;
+      .btn.secondary {
+        background: transparent;
+        outline: 1px solid var(--border);
+        color: var(--txt);
       }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 22px;
-        align-items: center;
-      }
-      @media (min-width: 960px) {
-        .hero-grid {
-          grid-template-columns: 1.1fr 0.9fr;
-          gap: 40px;
-        }
-      }
-
       .badge {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        padding: 6px 10px;
-        border-radius: 100px;
-        font-size: 12px;
-        color: #06342d;
-        background: linear-gradient(180deg, var(--accent), var(--accent-2));
+        gap: 0.5rem;
+        background: rgba(88, 211, 140, 0.12);
+        color: var(--brand);
+        border: 1px solid rgba(88, 211, 140, 0.35);
+        padding: 0.35rem 0.6rem;
+        border-radius: 999px;
         font-weight: 700;
-        letter-spacing: 0.3px;
-      }
-      h1 {
-        font-size: clamp(32px, 5vw, 56px);
-        line-height: 1.04;
-        margin: 8px 0 10px;
-        letter-spacing: -0.3px;
-      }
-      p.lead {
-        font-size: clamp(16px, 2.4vw, 19px);
-        color: #41565b;
-        margin: 0 0 18px;
+        font-size: 0.82rem;
       }
 
-      .trust {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
+      h2 {
+        font-size: clamp(1.4rem, 3.8vw, 2.7rem);
+        line-height: 1.15;
+        margin: 0.25rem 0 0.6rem;
+      }
+
+      /* HERO */
+      .hero {
+        padding-top: clamp(24px, 5vw, 56px);
+        padding-bottom: clamp(20px, 4vw, 40px);
+      }
+      .hero-wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(20px, 3vw, 40px);
         align-items: center;
-        margin: 14px 0 0;
-        color: #51676c;
-        font-size: 13px;
       }
-      .trust .dot {
-        width: 6px;
-        height: 6px;
-        background: var(--accent-2);
-        border-radius: 50%;
-        opacity: 0.9;
+      .hero h1 {
+        font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+        line-height: 1.15;
+        margin: 0.25rem 0 0.6rem;
       }
-
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
+      .hero p.sub {
+        color: var(--muted);
+        font-size: clamp(1rem, 1.5vw, 1.15rem);
+      }
+      .hero-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(6px);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: clamp(18px, 2.5vw, 22px);
         box-shadow: var(--shadow);
       }
-      .form-card {
-        padding: 18px;
+      .illus {
+        min-height: 260px;
+        border-radius: var(--radius-lg);
+        background: var(--illus-bg);
         position: relative;
+        overflow: hidden;
+        border: 1px solid var(--border);
       }
-      @media (min-width: 720px) {
-        .form-card {
-          padding: 22px;
-        }
+      .illus::after {
+        content: "";
+        position: absolute;
+        inset: auto -10% -35% -10%;
+        height: 60%;
+        background: conic-gradient(
+          from 210deg at 50% 50%,
+          rgba(88, 211, 140, 0.5),
+          rgba(79, 176, 255, 0.35),
+          transparent 60%
+        );
+        filter: blur(30px);
+      }
+      .illus .chip {
+        position: absolute;
+        right: 16px;
+        top: 16px;
       }
 
+      /* TRUST */
+      .trust {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .trust > div {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 14px;
+      }
+      .trust strong {
+        display: block;
+      }
+
+      /* STEPS */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .step {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px;
+      }
+      .num {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: inline-grid;
+        place-items: center;
+        background: rgba(88, 211, 140, 0.18);
+        border: 1px solid rgba(88, 211, 140, 0.35);
+        color: var(--brand);
+        font-weight: 800;
+        margin-right: 8px;
+      }
+
+      /* FORM */
       form {
         display: grid;
         gap: 12px;
       }
+      .field {
+        display: grid;
+        gap: 6px;
+      }
+      .field label {
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .input {
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: var(--input-bg);
+        color: var(--txt);
+        padding: 0.85rem 0.95rem;
+        outline: none;
+      }
+      .input::placeholder {
+        color: #a8b7cd;
+      }
       .row {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
       }
-      @media (min-width: 560px) {
-        .row-2 {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-
-      label {
-        font-size: 13px;
-        color: #355056;
-      }
-      input,
-      select,
-      textarea {
-        width: 100%;
-        padding: 12px 14px;
-        border-radius: 12px;
-        border: 1px solid var(--line);
-        background: #fff;
-        color: var(--text);
-        outline: none;
-        transition: 0.2s border-color ease, 0.2s box-shadow ease;
-      }
-      input::placeholder,
-      textarea::placeholder {
-        color: #94a9ae;
-      }
-      input:focus,
-      textarea:focus,
-      select:focus {
-        border-color: var(--accent-2);
-        box-shadow: 0 0 0 4px rgba(0, 162, 143, 0.15);
-      }
-
-      .policy {
-        font-size: 12px;
-        color: #5a777e;
-        line-height: 1.4;
-      }
-
-      .illus {
-        position: relative;
-        aspect-ratio: 4/3;
-        border-radius: var(--radius);
-        overflow: hidden;
-        border: 1px solid var(--line);
-        background: radial-gradient(
-            120% 80% at 20% 10%,
-            rgba(0, 162, 143, 0.18),
-            rgba(0, 162, 143, 0) 50%
-          ),
-          linear-gradient(135deg, #e8f6f4, #f3fbfa 48%, #ffffff);
-        box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.05), var(--shadow);
-      }
-      .map-pin {
-        position: absolute;
-        top: 18%;
-        left: 62%;
-        transform: translate(-50%, -50%);
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        background: var(--accent);
-        box-shadow: 0 0 0 8px rgba(0, 162, 143, 0.18),
-          0 0 0 18px rgba(0, 162, 143, 0.08);
-        animation: ping 2.2s infinite;
-      }
-      @keyframes ping {
-        0% {
-          transform: translate(-50%, -50%) scale(0.8);
-          opacity: 0.9;
-        }
-        70% {
-          transform: translate(-50%, -50%) scale(1.25);
-          opacity: 0.15;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
-      .grid-4 {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      @media (min-width: 900px) {
-        .grid-4 {
-          grid-template-columns: repeat(4, 1fr);
-        }
-      }
-
-      section {
-        margin: 34px 0 0;
-      }
-      .section-head {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        gap: 12px;
-        margin-bottom: 10px;
-      }
-      .section-head h2 {
-        margin: 0;
-        font-size: 22px;
-      }
-      .muted {
+      .hint {
         color: var(--muted);
-        font-size: 14px;
+        font-size: 0.9rem;
+      }
+      .error {
+        color: var(--danger);
+        font-size: 0.9rem;
+      }
+      .success {
+        color: var(--ok);
       }
 
-      .feature {
-        padding: 18px;
-        border-radius: 16px;
-        border: 1px solid var(--line);
-        background: #fff;
-      }
-      .feature .icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        display: grid;
-        place-items: center;
-        background: rgba(0, 165, 143, 0.08);
-        color: var(--accent-2);
-        box-shadow: inset 0 0 0 1px var(--line);
-        margin-bottom: 8px;
-      }
-      .feature .icon svg {
-        width: 24px;
-        height: 24px;
-        stroke: currentColor;
-        stroke-width: 2;
-        fill: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-      .feature h3 {
-        margin: 6px 0 6px;
-        font-size: 16px;
-      }
-      .feature p {
-        margin: 0;
-        color: #3d555a;
-        font-size: 14px;
-      }
-
+      /* FOOTER */
       footer {
-        margin: 40px 0 30px;
-        color: #4b676d;
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        flex-wrap: wrap;
+        margin-top: 36px;
+        border-top: 1px solid var(--border);
+        padding-top: 18px;
+        color: var(--muted);
       }
-      .links {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
+      details {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 12px;
+        border-radius: 12px;
       }
 
-      .legal-modal {
-        position: fixed;
-        inset: 0;
-        display: none;
-        place-items: center;
-        background: rgba(0, 0, 0, 0.35);
-        padding: 20px;
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .hero-wrap {
+          grid-template-columns: 1fr;
+        }
+        .trust {
+          grid-template-columns: 1fr;
+        }
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        .row {
+          grid-template-columns: 1fr;
+        }
       }
-      .legal-box {
-        width: min(820px, 96vw);
-        max-height: 86vh;
-        overflow: auto;
-        background: #fff;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        box-shadow: var(--shadow);
-        padding: 20px;
-        color: var(--text);
-      }
-      .legal-box h2 {
-        margin-top: 0;
-      }
-      .close-x {
+
+      /* Sticky CTA (mobile) */
+      .sticky-cta {
         position: sticky;
-        top: 0;
-        float: right;
+        bottom: 0;
+        inset-inline: 0;
+        background: var(--sticky-bg);
+        padding: 10px 14px;
+        backdrop-filter: blur(6px);
+        border-top: 1px solid var(--border);
       }
-
-      .hidden {
-        display: none;
+      .stack {
+        display: flex;
+        gap: 10px;
+      }
+      .stack .btn {
+        flex: 1;
       }
     </style>
   </head>
   <body>
-    <div class="topbar">
-      Förderung: Wir helfen Ihnen, Zuschüsse von bis zu 15.000 € zu sichern.
-    </div>
-    <header>
-      <div class="container nav">
-        <div class="brand">
-          <!-- <div class="logo" aria-hidden="true"></div> -->
-          <span>Wärmepumpen Vogtland</span>
+    <header class="container" aria-label="Topbar">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+        "
+      >
+        <div style="display: flex; align-items: center; gap: 0.6rem">
+          <span class="badge">Vogtland</span>
+          <strong style="font-size: 1.05rem">Wärmepumpen Beratung</strong>
         </div>
-        <button
-          class="btn btn-primary cta-header"
-          onclick="document.getElementById('lead').scrollIntoView({behavior:'smooth'});"
-        >
-          Kostenlose Beratung
-        </button>
+        <nav style="display: flex; align-items: center; gap: 0.9rem">
+          <a href="#formular" class="btn" style="padding: 0.6rem 0.8rem"
+            >Kostenfreie Beratung sichern</a
+          >
+          <button
+            id="themeToggleBtn"
+            class="btn secondary"
+            type="button"
+            aria-label="Darstellung umschalten"
+          >
+            🌙
+          </button>
+        </nav>
       </div>
     </header>
 
-    <main class="container">
+    <main>
+      <!-- HERO -->
       <section class="hero">
-        <div class="hero-grid">
-          <div>
-            <span class="badge">Regional im Vogtland</span>
-            <h1>Wärmepumpen Vogtland – klar, einfach, nah.</h1>
-            <p class="lead">
-              Kostenlose Beratung anfordern – wir melden uns telefonisch
-              innerhalb von 24 Stunden.
+        <div class="container hero-wrap">
+          <div class="hero-copy">
+            <span class="badge">Regional & persönlich</span>
+            <h1>
+              Ihre Wärmepumpe im Vogtland –
+              <span style="color: var(--brand)">Förderung bis 15.000 €</span>
+              sichern
+            </h1>
+            <p class="sub">
+              Kostenfreie Beratung. Wir empfehlen Ihnen die passende Lösung und
+              kümmern uns um die Förderanträge.
             </p>
-            <div class="trust">
-              <div class="dot"></div>
-              Direkter Ansprechpartner
-              <div class="dot"></div>
-              Vor-Ort-Termin möglich
-              <div class="dot"></div>
-              Kein Callcenter
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                margin-top: 12px;
+              "
+            >
+              <a class="btn" href="#formular"
+                >Jetzt kostenfreie Beratung sichern</a
+              >
+              <a class="btn secondary" href="tel:+493741000000"
+                >Oder direkt anrufen: 03741 000000</a
+              >
+            </div>
+
+            <!-- <div class="container" style="padding: 0; margin: 18px 0 0 0">
+              <div class="trust">
+                <div>
+                  <strong>Vor‑Ort‑Termin</strong
+                  ><span class="hint"
+                    >Im gesamten Vogtland – schnell & unkompliziert</span
+                  >
+                </div>
+                <div>
+                  <strong>Förderservice</strong
+                  ><span class="hint">Wir unterstützen bei allen Anträgen</span>
+                </div>
+                <div>
+                  <strong>Persönlicher Kontakt</strong
+                  ><span class="hint"
+                    >Direkter Ansprechpartner statt Callcenter</span
+                  >
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <!-- <div class="hero-card">
+            <div class="illus">
+              <span class="chip badge">CO₂ sparen · Kosten senken</span>
+            </div>
+            <div style="margin-top: 14px" class="hint">
+              Kostenfreie & unverbindliche Erstberatung.
+              <strong style="color: #fff">Dauer: 15–20 Min.</strong>
+            </div>
+            <div style="margin-top: 12px">
+              <a class="btn" href="#formular">Rückruf anfordern</a>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- WARUM KURZ -->
+      <section id="vorteile">
+        <div class="container">
+          <h2 style="margin: 0 0 8px; color: var(--brand)">
+            Vorteile einer Wärmepumpe
+          </h2>
+          <p class="hint" style="margin-top: 0">
+            Kurz & knapp – die 3 wichtigsten Punkte:
+          </p>
+          <div class="steps" style="margin-top: 12px">
+            <div class="step">
+              <span class="num">1</span><strong>Heizkosten senken</strong>
+              <div class="hint">
+                Moderne Systeme arbeiten effizient – besonders mit
+                Fußbodenheizung oder geeigneten Heizkörpern.
+              </div>
+            </div>
+            <div class="step">
+              <span class="num">2</span><strong>Unabhängiger werden</strong>
+              <div class="hint">
+                Weniger abhängig von Öl & Gas – Strom kann teilweise selbst
+                erzeugt werden (PV).
+              </div>
+            </div>
+            <div class="step">
+              <span class="num">3</span><strong>Staatliche Förderung</strong>
+              <div class="hint">
+                Bis zu 15.000 € möglich – wir prüfen Ihre Förderfähigkeit und
+                übernehmen den Papierkram.
+              </div>
             </div>
           </div>
+          <!-- <div class="hint" style="margin-top: 8px">
+            * Förderhöhe abhängig von individuellen Voraussetzungen (z. B.
+            Austausch alter Heizung, Gebäudestatus). Keine Rechtsberatung.
+          </div> -->
+        </div>
+      </section>
 
-          <div class="card form-card" id="lead">
-            <h2 style="margin: 4px 0 12px; font-size: 20px">
-              Jetzt kostenlose Beratung anfordern - wir melden uns innerhalb von
-              24 Stunden.
+      <!-- ABLAUF -->
+      <!-- <section id="ablauf">
+        <div class="container">
+          <h2 style="margin: 0 0 8px; color: var(--brand)">So läuft’s ab</h2>
+          <div class="steps" style="margin-top: 12px">
+            <div class="step">
+              <span class="num">1</span><strong>Formular ausfüllen</strong>
+              <div class="hint">Kontaktdaten & PLZ – dauert 1 Minute.</div>
+            </div>
+            <div class="step">
+              <span class="num">2</span><strong>Rückruf</strong>
+              <div class="hint">
+                Wir melden uns und klären die wichtigsten Fragen.
+              </div>
+            </div>
+            <div class="step">
+              <span class="num">3</span><strong>Vor‑Ort‑Termin</strong>
+              <div class="hint">
+                Wir schauen uns Heizung & Haus an und besprechen die beste
+                Lösung.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- FORMULAR -->
+      <section
+        id="formular"
+        class="container"
+        aria-label="Kontaktformular"
+        style="scroll-margin-top: 60px"
+      >
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: clamp(16px, 2vw, 24px);
+          "
+        >
+          <div>
+            <h2 style="margin: 0 0 6px; color: var(--brand)">
+              Kostenfreie Beratung sichern
             </h2>
+            <p class="hint" style="margin-top: 0">
+              Wir rufen Sie werktags innerhalb von 24 Stunden zurück.
+              <!-- <strong style="color: #fff">Vorrang für PLZ im Vogtland</strong>. -->
+            </p>
+
             <form id="leadForm" novalidate>
-              <div class="row row-2">
-                <div>
-                  <label for="name">Ihr Name</label>
+              <!-- <div class="field">
+                <label for="name">Ihr Name*</label>
+                <input
+                  class="input"
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Max Mustermann"
+                  required
+                />
+                <div class="error" data-err-for="name"></div>
+              </div> -->
+              <div class="row">
+                <div class="field">
+                  <label for="name">Ihr Name*</label>
                   <input
+                    class="input"
                     id="name"
                     name="name"
                     type="text"
+                    autocomplete="name"
                     placeholder="Max Mustermann"
                     required
                   />
+                  <div class="error" data-err-for="name"></div>
                 </div>
-                <div>
-                  <label for="phone">Telefon</label>
+                <div class="field">
+                  <label for="phone">Telefon*</label>
                   <input
+                    class="input"
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder="0151 23456789"
+                    inputmode="tel"
+                    placeholder="z. B. 0171 1234567"
+                    pattern="[0-9+()\-\s]{6,}"
                     required
                   />
+                  <div class="error" data-err-for="phone"></div>
                 </div>
-              </div>
-              <div class="row row-2">
-                <div>
-                  <label for="email">E‑Mail</label>
+
+                <!-- <div class="field">
+                  <label for="zip">PLZ*</label>
                   <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="max@beispiel.de"
-                    required
-                  />
-                </div>
-                <div>
-                  <label for="zip">PLZ</label>
-                  <input
+                    class="input"
                     id="zip"
                     name="zip"
                     type="text"
                     inputmode="numeric"
-                    pattern="^08[0-9]{3}$"
-                    placeholder="08***"
+                    placeholder="z. B. 08523"
+                    pattern="\d{5}"
                     required
                   />
-                </div>
+                  <div class="error" data-err-for="zip"></div>
+                </div> -->
               </div>
-              <div class="row">
-                <div>
-                  <label for="notes">Kurzbeschreibung (optional)</label>
-                  <textarea
-                    id="notes"
-                    name="notes"
-                    rows="3"
-                    placeholder="z. B. aktuelles Heizsystem, gewünschter Zeitraum"
-                  ></textarea>
+              <!-- <div class="row">
+                <div class="field">
+                  <label for="email">E‑Mail (optional)</label>
+                  <input
+                    class="input"
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="name@beispiel.de"
+                  />
+                  <div class="error" data-err-for="email"></div>
                 </div>
-              </div>
-
-              <div class="row">
-                <label class="policy"
-                  ><input type="checkbox" id="consent" required /> Ich willige
-                  ein, dass meine Angaben zum Zweck der Kontaktaufnahme
-                  verarbeitet werden.
-                  <button
-                    type="button"
-                    class="linklike"
-                    onclick="openLegal('privacy')"
-                    style="
-                      background: none;
-                      border: 0;
-                      padding: 0;
-                      color: var(--accent-2);
-                      cursor: pointer;
-                    "
+                <div class="field">
+                  <label for="callback"
+                    >Bevorzugte Rückrufzeit (optional)</label
                   >
-                    Datenschutzhinweise
-                  </button></label
+                  <select class="input" id="callback" name="callback">
+                    <option value="">Egal</option>
+                    <option>Vormittags</option>
+                    <option>Nachmittags</option>
+                    <option>Abends</option>
+                  </select>
+                </div>
+              </div> -->
+              <div class="field">
+                <label for="notes">Anmerkungen (optional)</label>
+                <textarea
+                  class="input"
+                  id="notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Kurze Info zu Ihrer aktuellen Heizung oder Fragen"
+                ></textarea>
+              </div>
+
+              <!-- Consent -->
+              <div class="field" style="gap: 10px">
+                <label
+                  style="display: flex; align-items: flex-start; gap: 0.6rem"
                 >
+                  <input
+                    type="checkbox"
+                    id="consent"
+                    required
+                    style="margin-top: 0.25rem"
+                  />
+                  <span
+                    >Ich bin mit der Verarbeitung meiner Daten zum Zweck der
+                    Kontaktaufnahme einverstanden und habe den
+                    <a href="#datenschutz">Datenschutzhinweis</a> gelesen.</span
+                  >
+                </label>
+                <div class="error" data-err-for="consent"></div>
               </div>
 
-              <div class="row">
-                <button class="btn btn-primary" type="submit">
-                  Beratung anfordern
-                </button>
-              </div>
+              <!-- Hidden tracking fields (auto‑filled) -->
+              <input type="hidden" name="utm_source" />
+              <input type="hidden" name="utm_medium" />
+              <input type="hidden" name="utm_campaign" />
+              <input type="hidden" name="utm_term" />
+              <input type="hidden" name="utm_content" />
+              <input type="hidden" name="gclid" />
+              <input type="hidden" name="ttclid" />
+              <input type="hidden" name="referrer" />
+              <input type="hidden" name="page_url" />
+              <input type="hidden" name="user_agent" />
 
-              <p
-                id="msg"
-                class="policy"
-                aria-live="polite"
-                style="min-height: 1.2em; margin: 6px 0 0"
-              ></p>
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  margin-top: 4px;
+                "
+              >
+                <button class="btn" type="submit" id="submitBtn">Senden</button>
+                <!-- <a class="btn secondary" href="tel:+493741000000"
+                  >Oder anrufen: 03741 000000</a
+                > -->
+                <span class="hint" id="formHint"></span>
+              </div>
             </form>
           </div>
+
+          <!-- Kontakt/Trust Card -->
+          <aside>
+            <div class="hero-card">
+              <h3 style="margin-top: 4px; margin-bottom: 8px">
+                Ihr Ansprechpartner
+              </h3>
+              <div style="display: flex; gap: 12px; align-items: center">
+                <div
+                  style="
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    background: linear-gradient(135deg, #4fb0ff44, #58d38c44);
+                    border: 1px solid var(--border);
+                  "
+                ></div>
+                <div>
+                  <strong>CP</strong>
+                  <div class="hint">Vogtland Wärmepumpen Beratung</div>
+                  <div class="hint">
+                    Telefon: <a href="tel:+493741000000">03741 000000</a>
+                  </div>
+                </div>
+              </div>
+              <!-- <ul style="margin: 14px 0 0; padding: 0 0 0 18px">
+                <li class="hint">
+                  Kostenlose Erstberatung · Keine Verpflichtung
+                </li>
+                <li class="hint">Vor‑Ort‑Termin innerhalb weniger Tage</li>
+                <li class="hint">Unterstützung bei Förderanträgen</li>
+              </ul> -->
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section>
-        <div class="section-head">
-          <h2>Vorteile einer Wärmepumpe</h2>
-          <!-- <span class="muted">Die Vorteile auf einen Blick</span> -->
-        </div>
-        <div class="grid-4">
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 14a8 8 0 1 1 16 0" />
-                <circle cx="12" cy="14" r="1.5" />
-                <path d="M12 14l4-4" />
-              </svg>
-            </div>
-            <h3>Effizient</h3>
-            <p>
-              Bis zu 4 kWh Wärme aus 1 kWh Strom (je nach System & Auslegung).
-            </p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <circle cx="8" cy="12" r="3" />
-                <path
-                  d="M8 5v2M8 17v2M3 12h2M11 12h2M5.5 8.5l1.4 1.4M5.5 15.5l1.4-1.4"
-                />
-                <path d="M16 7v10M13 10l3-3 3 3M13 14l3 3 3-3" />
-              </svg>
-            </div>
-            <h3>Heizen & Kühlen</h3>
-            <p>
-              Im Winter warm, im Sommer angenehm kühl – ein System, zwei Nutzen.
-            </p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <rect x="3" y="6" width="18" height="12" rx="2" ry="2" />
-                <circle cx="12" cy="12" r="3" />
-                <path d="M7 9h0M17 15h0" />
-              </svg>
-            </div>
-            <h3>Förderfähig</h3>
-            <p>
-              Wir helfen, Zuschüsse bis zu 15.000 € zu sichern – ohne
-              Bürokratie‑Stress.
-            </p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M4 12l8-6 8 6" />
-                <path d="M6 10v8h12v-8" />
-                <path d="M10 18v-4h4v4" />
-              </svg>
-            </div>
-            <h3>Bestandstauglich</h3>
-            <p>
-              Auch im Altbau machbar – mit der passenden Planung und Auslegung.
-            </p>
+      <!-- <div class="sticky-cta" aria-hidden="true">
+        <div class="container">
+          <div class="stack">
+            <a class="btn" href="#formular">Kostenfreie Beratung anfordern</a>
+            <a class="btn secondary" href="tel:+493741000000">Anrufen</a>
           </div>
         </div>
-      </section>
-
-      <footer>
-        <div>© <span id="yearNow"></span> Wärmepumpen Vogtland</div>
-        <div class="links">
-          <a href="#" onclick="openLegal('imprint');return false;">Impressum</a>
-          <a href="#" onclick="openLegal('privacy');return false;"
-            >Datenschutz</a
-          >
-        </div>
-      </footer>
+      </div> -->
     </main>
 
-    <!-- Legal Modals -->
-    <div
-      id="legal-modal"
-      class="legal-modal"
-      aria-hidden="true"
-      role="dialog"
-      aria-label="Rechtliche Hinweise"
-    >
-      <div class="legal-box">
-        <button class="btn close-x" onclick="closeLegal()">Schließen</button>
-        <div id="legal-content"></div>
+    <footer class="container">
+      <div style="display: grid; gap: 14px">
+        <!-- <details id="datenschutz">
+          <summary><strong>Datenschutzhinweis (Kurzfassung)</strong></summary>
+          <p class="hint">
+            Wir verwenden Ihre Angaben ausschließlich zur Kontaktaufnahme und
+            zur Vorbereitung eines Beratungsgesprächs. Rechtsgrundlage: Art. 6
+            Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen). Eine Weitergabe an
+            Dritte erfolgt nicht ohne Ihre Einwilligung. Sie können Ihre
+            Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen
+            (E‑Mail siehe Impressum). Vollständige Informationen finden Sie in
+            unserer Datenschutzerklärung.
+          </p>
+        </details>
+        <details>
+          <summary>
+            <strong>Impressum (Platzhalter – bitte ausfüllen)</strong>
+          </summary>
+          <p class="hint">
+            Firma/Name, Straße, PLZ Ort (Vogtland), Telefon, E‑Mail,
+            Vertretungsberechtigte Person, USt‑ID/Steuernummer, Registereintrag
+            (falls vorhanden).
+          </p>
+        </details> -->
+        <div class="hint">
+          © <span id="year"></span> Wärmepumpen Beratung Vogtland. Alle Rechte
+          vorbehalten.
+        </div>
       </div>
-    </div>
+    </footer>
 
     <script>
-      // ====== Simple UX helpers ======
-      document.getElementById("yearNow").textContent = new Date().getFullYear();
+      // =======================
+      // CONFIG
+      // =======================
+      // Wenn ihr bereits einen Formular‑Endpoint habt (z. B. eigenes Backend oder Formspree), hier eintragen:
+      // Beispiel Formspree: https://formspree.io/f/ABCDEFGH
+      const SUBMIT_ENDPOINT = ""; // leer = Fallback auf Mailto
+      const FALLBACK_MAIL = "info@beispiel-vogtland.de"; // für Mailto‑Fallback
 
-      function openLegal(type) {
-        const modal = document.getElementById("legal-modal");
-        const box = document.getElementById("legal-content");
-        const imprint = `
-        <h2>Impressum</h2>
-        <p><strong>Wärmepumpen Vogtland</strong><br/>
-        (Bitte hier eure korrekten Anbieterangaben hinterlegen – Firmenname/UG, Anschrift, Vertretungsberechtigte, Kontakt, USt-ID, Registernummer, etc.)</p>
-        <p>E-Mail: <a href="mailto:leads@waermepumpen-vogtland.de">leads@waermepumpen-vogtland.de</a></p>
-      `;
-        const privacy = `
-        <h2>Datenschutzerklärung (Kurzfassung)</h2>
-        <p>Wir verarbeiten die von Ihnen über das Formular übermittelten Daten (Name, Telefon, E‑Mail, PLZ, freiwillige Angaben) ausschließlich zur Kontaktaufnahme und zur Prüfung einer möglichen Beratung/Angebotserstellung durch regionale Partner. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) sowie ggf. lit. b (vorvertragliche Maßnahmen).</p>
-        <p>Ihre Daten werden nicht ohne Ihre Zustimmung an Dritte verkauft. Eine Übermittlung an regionale Umsetzungspartner erfolgt nur, wenn dies zur Angebotserstellung erforderlich ist und Sie dem ausdrücklich zugestimmt haben.</p>
-        <p>Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Schreiben Sie dazu an <a href="mailto:privacy@waermepumpen-vogtland.de">privacy@waermepumpen-vogtland.de</a>. Weitere Informationen zur Speicherdauer, Betroffenenrechten (Auskunft, Löschung, Berichtigung) und Auftragsverarbeitung ergänzen Sie bitte in der Langfassung.</p>
-      `;
-        box.innerHTML = type === "privacy" ? privacy : imprint;
-        modal.style.display = "grid";
-        modal.setAttribute("aria-hidden", "false");
+      // =======================
+      // Helper
+      // =======================
+      function $(q, ctx = document) {
+        return ctx.querySelector(q);
       }
-      function closeLegal() {
-        const modal = document.getElementById("legal-modal");
-        modal.style.display = "none";
-        modal.setAttribute("aria-hidden", "true");
+      function $all(q, ctx = document) {
+        return Array.from(ctx.querySelectorAll(q));
+      }
+      function setErr(id, msg) {
+        const el = document.querySelector(`[data-err-for="${id}"]`);
+        if (el) {
+          el.textContent = msg || "";
+        }
+      }
+      function serializeForm(form) {
+        const data = {};
+        new FormData(form).forEach((v, k) => {
+          data[k] = v;
+        });
+        return data;
+      }
+      function getParams() {
+        const u = new URL(location.href);
+        const p = Object.fromEntries(u.searchParams.entries());
+        return p;
+      }
+      function fillHiddenTracking(form) {
+        const params = getParams();
+        const map = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_term",
+          "utm_content",
+          "gclid",
+          "ttclid",
+        ];
+        map.forEach((k) => {
+          const input = form.querySelector(`[name="${k}"]`);
+          if (input) {
+            input.value = params[k] || "";
+          }
+        });
+        form.querySelector('[name="referrer"]').value = document.referrer || "";
+        form.querySelector('[name="page_url"]').value = location.href;
+        form.querySelector('[name="user_agent"]').value = navigator.userAgent;
       }
 
-      // ====== Lead form handling (no backend) ======
-      const MAIL_TO = "leads@waermepumpen-vogtland.de";
-      const form = document.getElementById("leadForm");
-      const msg = document.getElementById("msg");
+      // =======================
+      // THEME TOGGLE
+      // =======================
+      const THEME_KEY = "wpv_theme";
+      (function initTheme() {
+        const saved = localStorage.getItem(THEME_KEY) || "light";
+        document.documentElement.setAttribute("data-theme", saved);
+        const btn = $("#themeToggleBtn");
+        if (btn) {
+          btn.textContent = saved === "dark" ? "☀️" : "🌙";
+        }
+      })();
+      const themeBtn = document.getElementById("themeToggleBtn");
+      if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+          const current =
+            document.documentElement.getAttribute("data-theme") || "light";
+          const next = current === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          localStorage.setItem(THEME_KEY, next);
+          themeBtn.textContent = next === "dark" ? "☀️" : "🌙";
+        });
+      }
 
-      form.addEventListener("submit", function (e) {
+      // =======================
+      // Validation minimalistisch & konversionsfreundlich
+      // =======================
+      function validate(form) {
+        let ok = true;
+        const name = form.name.value.trim();
+        const phone = form.phone.value.trim();
+        const zip = form.zip.value.trim();
+        const consent = $("#consent").checked;
+
+        setErr("name", "");
+        setErr("phone", "");
+        setErr("zip", "");
+        setErr("consent", "");
+
+        if (!name) {
+          setErr("name", "Bitte Namen angeben.");
+          ok = false;
+        }
+        if (!phone || !/[0-9+()\-\s]{6,}/.test(phone)) {
+          setErr("phone", "Bitte Telefonnummer prüfen.");
+          ok = false;
+        }
+        if (!/^[0-9]{5}$/.test(zip)) {
+          setErr("zip", "Bitte 5‑stellige PLZ eingeben.");
+          ok = false;
+        }
+        if (!consent) {
+          setErr("consent", "Bitte Einwilligung bestätigen.");
+          ok = false;
+        }
+        return ok;
+      }
+
+      // =======================
+      // Submit
+      // =======================
+      $("#year").textContent = new Date().getFullYear();
+      const form = $("#leadForm");
+      fillHiddenTracking(form);
+
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        msg.textContent = "";
+        const hint = $("#formHint");
+        const btn = $("#submitBtn");
+        hint.textContent = "";
 
-        const data = Object.fromEntries(new FormData(form));
+        if (!validate(form)) return;
 
-        // Basic validation
-        if (!data.name || !data.phone || !data.email || !data.zip) {
-          msg.textContent = "Bitte füllen Sie alle Pflichtfelder aus.";
-          msg.style.color = "var(--danger)";
-          return;
+        btn.disabled = true;
+        btn.textContent = "Senden …";
+        const payload = serializeForm(form);
+
+        try {
+          if (SUBMIT_ENDPOINT) {
+            // JSON POST – ggf. im Backend CORS & Spam‑Schutz beachten
+            const res = await fetch(SUBMIT_ENDPOINT, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(payload),
+            });
+            if (!res.ok) throw new Error("Serverfehler");
+            hint.innerHTML =
+              '<span class="success">Danke! Wir melden uns in Kürze.</span>';
+            form.reset();
+            $("#consent").checked = false;
+          } else {
+            // Fallback: Mailto mit vorgefülltem Body (keine Gewähr, abhängig vom Mail‑Client des Nutzers)
+            const subject = encodeURIComponent(
+              "Wärmepumpen‑Beratung: Rückruf anfordern"
+            );
+            const lines = [
+              `Name: ${payload.name || ""}`,
+              `Telefon: ${payload.phone || ""}`,
+              `PLZ: ${payload.zip || ""}`,
+              `E‑Mail: ${payload.email || ""}`,
+              `Rückrufzeit: ${payload.callback || ""}`,
+              `Anmerkungen: ${payload.notes || ""}`,
+              "",
+              `Quelle: ${payload.utm_source || ""} / ${
+                payload.utm_medium || ""
+              } / ${payload.utm_campaign || ""}`,
+              `Referrer: ${payload.referrer || ""}`,
+              `Seite: ${payload.page_url || ""}`,
+            ].join("%0A");
+            const href = `mailto:${encodeURIComponent(
+              FALLBACK_MAIL
+            )}?subject=${subject}&body=${lines}`;
+            location.href = href;
+            hint.innerHTML =
+              '<span class="success">Danke! Falls kein Mail‑Programm öffnet, rufen Sie uns bitte direkt an.</span>';
+          }
+        } catch (err) {
+          console.error(err);
+          hint.innerHTML =
+            '<span class="error">Leider hat etwas nicht geklappt. Bitte rufen Sie uns kurz an oder versuchen Sie es erneut.</span>';
+        } finally {
+          btn.disabled = false;
+          btn.textContent = "Rückruf anfordern";
         }
-        // Zip must begin with 08 and have 5 digits
-        // if (!/^08\d{3}$/.test(data.zip)) {
-        //   msg.textContent =
-        //     "Aktuell nehmen wir nur Anfragen aus dem Vogtland (PLZ 08*** ) an.";
-        //   msg.style.color = "var(--danger)";
-        //   return;
-        // }
-        // Consent
-        if (!document.getElementById("consent").checked) {
-          msg.textContent = "Bitte stimmen Sie der Datenverarbeitung zu.";
-          msg.style.color = "var(--danger)";
-          return;
-        }
-
-        // Build email body
-        const subject = encodeURIComponent(
-          "Neue Anfrage: Wärmepumpen Vogtland"
-        );
-        const body = encodeURIComponent(
-          `Neue Anfrage von der Website%0D%0A%0D%0A` +
-            `Name: ${data.name}%0D%0A` +
-            `Telefon: ${data.phone}%0D%0A` +
-            `E-Mail: ${data.email}%0D%0A` +
-            `PLZ: ${data.zip}%0D%0A` +
-            `Notizen:%0D%0A${(data.notes || "").replace(/\n/g, "%0D%0A")}`
-        );
-
-        const mailto = `mailto:${MAIL_TO}?subject=${subject}&body=${body}`;
-
-        // UX: show success state then trigger mail client
-        msg.textContent =
-          "Vielen Dank! Ihr E‑Mail‑Programm öffnet sich gleich. Senden Sie die Nachricht, um die Anfrage abzuschließen.";
-        msg.style.color = "var(--ok)";
-
-        setTimeout(() => {
-          window.location.href = mailto;
-        }, 400);
-        form.reset();
       });
+
+      // CTA‑Links scrollen smooth
+      $all('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (ev) => {
+          const id = a.getAttribute("href").slice(1);
+          const el = document.getElementById(id);
+          if (el) {
+            ev.preventDefault();
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+
+    <!-- SEO LocalBusiness (Platzhalter – bitte mit echten Daten ersetzen) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Wärmepumpen Beratung Vogtland",
+        "areaServed": "Vogtland",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vogtland",
+          "addressCountry": "DE"
+        },
+        "telephone": "+49-3741-000000",
+        "url": ""
+      }
     </script>
   </body>
 </html>
