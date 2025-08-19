@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wärmepumpen Vogtland — Ihr regionaler Ansprechpartner</title>
+    <meta
+      name="description"
+      content="Wärmepumpen Vogtland: Regionale Beratung, fördersichere Planung und schnelle Einschätzung zu Machbarkeit & Zuschüssen. Kostenloses Erstgespräch – nur für das Vogtland (PLZ 08***)."
+    />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Wärmepumpen Vogtland" />
+    <meta
+      property="og:description"
+      content="Regionale Beratung, fördersichere Planung & Installation. Kostenloses Erstgespräch – nur für das Vogtland (PLZ 08***)."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23f7fbfc'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23008476' font-family='Inter,Arial' font-size='64' letter-spacing='1.5'%3EW%C3%A4rmepumpen Vogtland%3C/text%3E%3C/svg%3E"
+    />
+    <meta property="og:locale" content="de_DE" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #f7fbfc; /* light base */
+        --surface: #ffffff;
+        --muted: #5f757b;
+        --text: #0f2328;
+        --accent: #00c2a8; /* mint teal */
+        --accent-2: #00a58f;
+        --danger: #e11d48;
+        --ok: #16a34a;
+        --line: rgba(15, 35, 40, 0.08);
+        --shadow: 0 10px 30px rgba(2, 20, 22, 0.08);
+        --radius: 16px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+      a {
+        color: var(--accent-2);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: min(1120px, 92vw);
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        backdrop-filter: saturate(140%) blur(8px);
+        background: rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: radial-gradient(
+          120% 120% at 20% 20%,
+          #5cf0dc,
+          #1db8a3 60%,
+          #07927f
+        );
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06), var(--shadow);
+        position: relative;
+      }
+      .logo:after {
+        content: "";
+        position: absolute;
+        inset: 7px;
+        border-radius: 8px;
+        background: conic-gradient(
+          from 90deg at 60% 40%,
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0) 40%
+        );
+      }
+      .brand span {
+        font-size: 17px;
+      }
+
+      .navlinks {
+        display: none;
+        gap: 14px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .navlinks a {
+        color: inherit;
+      }
+      @media (min-width: 860px) {
+        .navlinks {
+          display: flex;
+        }
+      }
+
+      .cta-header {
+        display: none;
+      }
+      @media (min-width: 720px) {
+        .cta-header {
+          display: inline-flex;
+        }
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 100px;
+        border: 1px solid var(--line);
+        background: linear-gradient(
+          180deg,
+          rgba(0, 162, 143, 0.08),
+          rgba(0, 162, 143, 0.04)
+        );
+        color: var(--text);
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s transform ease;
+        box-shadow: 0 6px 18px rgba(0, 162, 143, 0.12);
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .btn-primary {
+        background: linear-gradient(180deg, var(--accent), var(--accent-2));
+        color: #04211f;
+        border-color: transparent;
+        box-shadow: 0 12px 30px rgba(0, 162, 143, 0.25);
+      }
+
+      .hero {
+        position: relative;
+        padding: 56px 0 24px;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        align-items: center;
+      }
+      @media (min-width: 960px) {
+        .hero-grid {
+          grid-template-columns: 1.1fr 0.9fr;
+          gap: 40px;
+        }
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 100px;
+        font-size: 12px;
+        color: #06342d;
+        background: linear-gradient(180deg, var(--accent), var(--accent-2));
+        font-weight: 700;
+        letter-spacing: 0.3px;
+      }
+
+      h1 {
+        font-size: clamp(28px, 4.2vw, 48px);
+        line-height: 1.08;
+        margin: 10px 0 14px;
+      }
+      p.lead {
+        font-size: clamp(16px, 2.4vw, 19px);
+        color: #41565b;
+        margin: 0 0 20px;
+      }
+
+      .trust {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 18px 0 0;
+        color: #51676c;
+        font-size: 13px;
+      }
+      .trust .dot {
+        width: 6px;
+        height: 6px;
+        background: var(--accent-2);
+        border-radius: 50%;
+        opacity: 0.9;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .form-card {
+        padding: 18px;
+        position: relative;
+      }
+      @media (min-width: 720px) {
+        .form-card {
+          padding: 22px;
+        }
+      }
+
+      form {
+        display: grid;
+        gap: 12px;
+      }
+      .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      @media (min-width: 560px) {
+        .row-2 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      label {
+        font-size: 13px;
+        color: #355056;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--text);
+        outline: none;
+        transition: 0.2s border-color ease, 0.2s box-shadow ease;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        color: #94a9ae;
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        border-color: var(--accent-2);
+        box-shadow: 0 0 0 4px rgba(0, 162, 143, 0.15);
+      }
+
+      .policy {
+        font-size: 12px;
+        color: #5a777e;
+        line-height: 1.4;
+      }
+
+      .illus {
+        position: relative;
+        aspect-ratio: 4/3;
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: radial-gradient(
+            120% 80% at 20% 10%,
+            rgba(0, 162, 143, 0.18),
+            rgba(0, 162, 143, 0) 50%
+          ),
+          linear-gradient(135deg, #e8f6f4, #f3fbfa 48%, #ffffff);
+        box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.05), var(--shadow);
+      }
+      .map-pin {
+        position: absolute;
+        top: 18%;
+        left: 62%;
+        transform: translate(-50%, -50%);
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 8px rgba(0, 162, 143, 0.18),
+          0 0 0 18px rgba(0, 162, 143, 0.08);
+        animation: ping 2.2s infinite;
+      }
+      @keyframes ping {
+        0% {
+          transform: translate(-50%, -50%) scale(0.8);
+          opacity: 0.9;
+        }
+        70% {
+          transform: translate(-50%, -50%) scale(1.25);
+          opacity: 0.15;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      @media (min-width: 900px) {
+        .grid-3 {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      @media (min-width: 800px) {
+        .grid-2 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      section {
+        margin: 40px 0 0;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+      .section-head h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .feature {
+        padding: 16px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .feature h3 {
+        margin: 6px 0 8px;
+        font-size: 16px;
+      }
+      .feature p {
+        margin: 0;
+        color: #3d555a;
+        font-size: 14px;
+      }
+
+      .faq {
+        margin: 50px 0 0;
+      }
+      details {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+        background: #fff;
+      }
+      details + details {
+        margin-top: 12px;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      details p {
+        color: #3d555a;
+      }
+
+      footer {
+        margin: 50px 0 30px;
+        color: #4b676d;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .legal-modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        place-items: center;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 20px;
+      }
+      .legal-box {
+        width: min(820px, 96vw);
+        max-height: 86vh;
+        overflow: auto;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 20px;
+        color: var(--text);
+      }
+      .legal-box h2 {
+        margin-top: 0;
+      }
+      .close-x {
+        position: sticky;
+        top: 0;
+        float: right;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>Wärmepumpen Vogtland</span>
+        </div>
+        <nav class="navlinks">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#foerderung">Förderung</a>
+          <a href="#ablauf">Ablauf</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <button
+          class="btn btn-primary cta-header"
+          onclick="document.getElementById('lead').scrollIntoView({behavior:'smooth'});"
+        >
+          Kostenlose Beratung
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <span class="badge">Aus der Region – für das Vogtland</span>
+            <h1>Wärmepumpe im Vogtland – persönlich, fair, vor Ort.</h1>
+            <p class="lead">
+              Wir prüfen gemeinsam, ob und wie sich eine Wärmepumpe für Ihr Haus
+              lohnt – inklusive Einschätzung zu Machbarkeit, Zuschüssen und
+              Zeitplan. Regional, transparent, unverbindlich.
+            </p>
+            <div class="trust">
+              <div class="dot"></div>
+              Kein Callcenter – direkter Ansprechpartner
+              <div class="dot"></div>
+              Rückruf in 24h (werktags)
+              <div class="dot"></div>
+              Vor-Ort-Termin möglich
+            </div>
+
+            <div class="grid-3" style="margin-top: 18px">
+              <div class="feature">
+                <strong>1. Kurzcheck</strong>
+                <p>
+                  PLZ 08***, Eckdaten & Ziele – wir geben eine erste
+                  Einschätzung.
+                </p>
+              </div>
+              <div class="feature">
+                <strong>2. Beratung</strong>
+                <p>
+                  Telefonisch oder vor Ort – Machbarkeit, Gerätewahl, Zuschüsse.
+                </p>
+              </div>
+              <div class="feature">
+                <strong>3. Angebot</strong>
+                <p>Individuelles Konzept mit regionalen Fachbetrieben.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card form-card" id="lead">
+            <h2 style="margin: 4px 0 12px; font-size: 20px">
+              Kostenlose Beratung anfordern
+            </h2>
+            <form id="leadForm" novalidate>
+              <div class="row row-2">
+                <div>
+                  <label for="name">Ihr Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Max Mustermann"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="phone">Telefon</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="0151 23456789"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row row-2">
+                <div>
+                  <label for="email">E‑Mail</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="max@beispiel.de"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="zip">PLZ</label>
+                  <input
+                    id="zip"
+                    name="zip"
+                    type="text"
+                    inputmode="numeric"
+                    pattern="^08[0-9]{3}$"
+                    placeholder="08***"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row row-2">
+                <div>
+                  <label for="year">Baujahr des Hauses (optional)</label>
+                  <input
+                    id="year"
+                    name="year"
+                    type="number"
+                    min="1850"
+                    max="2025"
+                    placeholder="z. B. 1998"
+                  />
+                </div>
+                <div>
+                  <label for="callback"
+                    >Bevorzugte Rückrufzeit (optional)</label
+                  >
+                  <select id="callback" name="callback">
+                    <option value="">Bitte auswählen</option>
+                    <option>Vormittags</option>
+                    <option>Nachmittags</option>
+                    <option>Abends</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="notes">Kurzbeschreibung (optional)</label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    rows="3"
+                    placeholder="z. B. aktuelles Heizsystem, Dämmung, gewünschter Zeitraum"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="row">
+                <label class="policy"
+                  ><input type="checkbox" id="consent" required /> Ich willige
+                  ein, dass meine Angaben zum Zweck der Kontaktaufnahme
+                  verarbeitet werden.
+                  <button
+                    type="button"
+                    class="linklike"
+                    onclick="openLegal('privacy')"
+                    style="
+                      background: none;
+                      border: 0;
+                      padding: 0;
+                      color: var(--accent-2);
+                      cursor: pointer;
+                    "
+                  >
+                    Datenschutzhinweise
+                  </button></label
+                >
+              </div>
+
+              <div class="row">
+                <button class="btn btn-primary" type="submit">
+                  Rückruf anfragen
+                </button>
+              </div>
+
+              <p
+                id="msg"
+                class="policy"
+                aria-live="polite"
+                style="min-height: 1.2em; margin: 6px 0 0"
+              ></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="leistungen">
+        <div class="section-head">
+          <h2>Unsere Leistungen</h2>
+          <span class="muted">Von der Idee bis zur laufenden Anlage</span>
+        </div>
+        <div class="grid-3">
+          <div class="feature">
+            <h3>Individuelle Beratung</h3>
+            <p>Analyse Gebäude & Ziele, Technologievergleich, Kosten/Nutzen.</p>
+          </div>
+          <div class="feature">
+            <h3>Fördersichere Planung</h3>
+            <p>
+              Heizlast, Systemauslegung und Unterlagen passend zu den Kriterien.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Koordination & Einbau</h3>
+            <p>
+              Organisation mit regionalen Fachbetrieben – sauber und termintreu.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Inbetriebnahme & Einweisung</h3>
+            <p>
+              Optimale Einstellungen, Übergabe und erste Kontrolle im Betrieb.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Wartung & Service</h3>
+            <p>
+              Regelmäßige Checks für effizienten und störungsfreien Betrieb.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Finanzierung & Förderung</h3>
+            <p>
+              Realistische Zuschüsse, Unterstützung bei Anträgen und Optionen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <h2>Warum eine Wärmepumpe?</h2>
+          <span class="muted"
+            >Modern heizen – effizient, leise, zukunftssicher</span
+          >
+        </div>
+        <div class="grid-3">
+          <div class="feature">
+            <h3>Hohe Effizienz</h3>
+            <p>
+              Aus 1 kWh Strom bis zu 4 kWh Wärme/Kälte (COP bis 4, je nach
+              System).
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Heizen & Kühlen</h3>
+            <p>
+              Angenehm warm im Winter, sanfte Kühlung im Sommer – in einem
+              System.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Ideal im Bestand</h3>
+            <p>
+              Auch für Alt- und Bestandsbauten mit passender Auslegung geeignet.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Unabhängiger</h3>
+            <p>
+              Weniger Abhängigkeit von Öl/Gas und CO₂-Kosten langfristig senken.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Niedrige Wartung</h3>
+            <p>
+              Weniger Verschleißteile, planbare Services – solide
+              Betriebskosten.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Leiser Betrieb</h3>
+            <p>Moderne Geräte sind ruhig und aufstellfreundlich konzipiert.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="foerderung">
+        <div class="section-head">
+          <h2>Förderung & Finanzierung</h2>
+          <span class="muted">Wir planen fördersicher – Sie profitieren</span>
+        </div>
+        <div class="grid-2">
+          <div class="feature">
+            <h3>Zuschüsse sinnvoll nutzen</h3>
+            <p>
+              Wir prüfen Ihre Situation und schätzen Zuschüsse realistisch ein.
+              Die Antragstellung begleiten wir und bereiten die nötigen
+              Unterlagen vor.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Transparente Finanzierung</h3>
+            <p>
+              Auf Wunsch kalkulieren wir mit Finanzierungsoptionen über
+              Partnerbanken – damit Ihre monatliche Rate planbar bleibt.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ablauf">
+        <div class="section-head">
+          <h2>So läuft's</h2>
+          <span class="muted">Ein strukturierter Weg zur passenden Anlage</span>
+        </div>
+        <div class="grid-3">
+          <div class="feature">
+            <h3>1. Erstgespräch</h3>
+            <p>
+              Telefonisch – wir klären Ziele, Rahmenbedingungen und offene
+              Fragen.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>2. Vor-Ort-Termin</h3>
+            <p>
+              Wir prüfen Gegebenheiten, Aufstellorte und legen die nächsten
+              Schritte fest.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>3. Angebot & Umsetzung</h3>
+            <p>
+              Individuelles Konzept, fördersichere Planung, Einbau mit
+              Fachbetrieben.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" id="faq">
+        <h2 style="font-size: 22px; margin: 0 0 12px">Häufige Fragen</h2>
+        <details>
+          <summary>Wie schnell melden Sie sich?</summary>
+          <p>
+            In der Regel innerhalb von 24 Stunden (werktags). Wenn es eilig ist,
+            schreiben Sie es einfach in die Nachricht.
+          </p>
+        </details>
+        <details>
+          <summary>Kostet der Rückruf etwas?</summary>
+          <p>Nein, der Erstkontakt ist kostenlos und unverbindlich.</p>
+        </details>
+        <details>
+          <summary>Wie läuft die Förderung ab?</summary>
+          <p>
+            Wir geben Ihnen eine erste Einschätzung und zeigen die nächsten
+            Schritte. Die konkrete Beantragung erfolgt über die offiziellen
+            Stellen. Wir unterstützen bei der Vorbereitung der Unterlagen.
+          </p>
+        </details>
+        <details>
+          <summary>Welche Gebäude sind geeignet?</summary>
+          <p>
+            Vom Alt- bis zum Neubau – wichtig sind die Auslegung, Heizflächen
+            und die Zieltemperaturen. Das klären wir im Kurzcheck und
+            Vor-Ort-Termin.
+          </p>
+        </details>
+      </section>
+
+      <footer>
+        <div>© <span id="yearNow"></span> Wärmepumpen Vogtland</div>
+        <div class="links">
+          <a href="#" onclick="openLegal('imprint');return false;">Impressum</a>
+          <a href="#" onclick="openLegal('privacy');return false;"
+            >Datenschutz</a
+          >
+        </div>
+      </footer>
+    </main>
+
+    <!-- Legal Modals -->
+    <div
+      id="legal-modal"
+      class="legal-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Rechtliche Hinweise"
+    >
+      <div class="legal-box">
+        <button class="btn close-x" onclick="closeLegal()">Schließen</button>
+        <div id="legal-content"></div>
+      </div>
+    </div>
+
+    <script>
+      // ====== Simple UX helpers ======
+      document.getElementById("yearNow").textContent = new Date().getFullYear();
+
+      function openLegal(type) {
+        const modal = document.getElementById("legal-modal");
+        const box = document.getElementById("legal-content");
+        const imprint = `
+        <h2>Impressum</h2>
+        <p><strong>Wärmepumpen Vogtland</strong><br/>
+        (Bitte hier eure korrekten Anbieterangaben hinterlegen – Firmenname/UG, Anschrift, Vertretungsberechtigte, Kontakt, USt-ID, Registernummer, etc.)</p>
+        <p>E-Mail: <a href="mailto:leads@waermepumpen-vogtland.de">leads@waermepumpen-vogtland.de</a></p>
+      `;
+        const privacy = `
+        <h2>Datenschutzerklärung (Kurzfassung)</h2>
+        <p>Wir verarbeiten die von Ihnen über das Formular übermittelten Daten (Name, Telefon, E‑Mail, PLZ, freiwillige Angaben) ausschließlich zur Kontaktaufnahme und zur Prüfung einer möglichen Beratung/Angebotserstellung durch regionale Partner. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) sowie ggf. lit. b (vorvertragliche Maßnahmen).</p>
+        <p>Ihre Daten werden nicht ohne Ihre Zustimmung an Dritte verkauft. Eine Übermittlung an regionale Umsetzungspartner erfolgt nur, wenn dies zur Angebotserstellung erforderlich ist und Sie dem ausdrücklich zugestimmt haben.</p>
+        <p>Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Schreiben Sie dazu an <a href="mailto:privacy@waermepumpen-vogtland.de">privacy@waermepumpen-vogtland.de</a>. Weitere Informationen zur Speicherdauer, Betroffenenrechten (Auskunft, Löschung, Berichtigung) und Auftragsverarbeitung ergänzen Sie bitte in der Langfassung.</p>
+      `;
+        box.innerHTML = type === "privacy" ? privacy : imprint;
+        modal.style.display = "grid";
+        modal.setAttribute("aria-hidden", "false");
+      }
+      function closeLegal() {
+        const modal = document.getElementById("legal-modal");
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+      }
+
+      // ====== Lead form handling (no backend) ======
+      // Default: opens a prefilled mail in the user's client.
+      // Replace MAIL_TO with your address. For production, consider Tally/Typeform, Netlify Forms, or Formspree.
+      const MAIL_TO = "leads@waermepumpen-vogtland.de";
+
+      const form = document.getElementById("leadForm");
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        msg.textContent = "";
+
+        const data = Object.fromEntries(new FormData(form));
+
+        // Basic validation
+        if (!data.name || !data.phone || !data.email || !data.zip) {
+          msg.textContent = "Bitte füllen Sie alle Pflichtfelder aus.";
+          msg.style.color = "var(--danger)";
+          return;
+        }
+        // Zip must begin with 08 and have 5 digits
+        if (!/^08\d{3}$/.test(data.zip)) {
+          msg.textContent =
+            "Aktuell nehmen wir nur Anfragen aus dem Vogtland (PLZ 08*** ) an.";
+          msg.style.color = "var(--danger)";
+          return;
+        }
+        // Consent
+        if (!document.getElementById("consent").checked) {
+          msg.textContent = "Bitte stimmen Sie der Datenverarbeitung zu.";
+          msg.style.color = "var(--danger)";
+          return;
+        }
+
+        // Build email body
+        const subject = encodeURIComponent(
+          "Neue Anfrage: Wärmepumpen Vogtland"
+        );
+        const body = encodeURIComponent(
+          `Neue Anfrage von der Website%0D%0A%0D%0A` +
+            `Name: ${data.name}%0D%0A` +
+            `Telefon: ${data.phone}%0D%0A` +
+            `E-Mail: ${data.email}%0D%0A` +
+            `PLZ: ${data.zip}%0D%0A` +
+            `Baujahr: ${data.year || "-"}%0D%0A` +
+            `Rückruf: ${data.callback || "-"}%0D%0A` +
+            `Notizen:%0D%0A${(data.notes || "").replace(/\n/g, "%0D%0A")}`
+        );
+
+        const mailto = `mailto:${MAIL_TO}?subject=${subject}&body=${body}`;
+
+        // UX: show success state then trigger mail client
+        msg.textContent =
+          "Vielen Dank! Ihr E‑Mail‑Programm öffnet sich gleich. Senden Sie die Nachricht, um die Anfrage abzuschließen.";
+        msg.style.color = "var(--ok)";
+
+        // small delay to let user see the message
+        setTimeout(() => {
+          window.location.href = mailto;
+        }, 400);
+
+        // Optional: clear form
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
