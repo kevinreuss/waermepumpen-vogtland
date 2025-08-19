@@ -671,6 +671,21 @@
               <input type="hidden" name="page_url" />
               <input type="hidden" name="user_agent" />
 
+              <!-- FormSubmit optimization fields -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="Neue Wärmepumpen-Anfrage - Vogtland"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="text"
+                name="_honey"
+                style="display: none"
+                tabindex="-1"
+                autocomplete="off"
+              />
+
               <div
                 style="
                   display: flex;
@@ -772,8 +787,7 @@
       // =======================
       // Wenn ihr bereits einen Formular‑Endpoint habt (z. B. eigenes Backend oder Formspree), hier eintragen:
       // Beispiel Formspree: https://formspree.io/f/ABCDEFGH
-      const SUBMIT_ENDPOINT = ""; // leer = Fallback auf Mailto
-      const FALLBACK_MAIL = "info@beispiel-vogtland.de"; // für Mailto‑Fallback
+      const SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/kevreuss@gmail.com";
 
       // =======================
       // Helper
@@ -902,47 +916,20 @@
         const payload = serializeForm(form);
 
         try {
-          if (SUBMIT_ENDPOINT) {
-            // JSON POST – ggf. im Backend CORS & Spam‑Schutz beachten
-            const res = await fetch(SUBMIT_ENDPOINT, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
-              body: JSON.stringify(payload),
-            });
-            if (!res.ok) throw new Error("Serverfehler");
-            hint.innerHTML =
-              '<span class="success">Danke! Wir melden uns in Kürze.</span>';
-            form.reset();
-            $("#consent").checked = false;
-          } else {
-            // Fallback: Mailto mit vorgefülltem Body (keine Gewähr, abhängig vom Mail‑Client des Nutzers)
-            const subject = encodeURIComponent(
-              "Wärmepumpen‑Beratung: Rückruf anfordern"
-            );
-            const lines = [
-              `Name: ${payload.name || ""}`,
-              `Telefon: ${payload.phone || ""}`,
-              `PLZ: ${payload.zip || ""}`,
-              `E‑Mail: ${payload.email || ""}`,
-              `Rückrufzeit: ${payload.callback || ""}`,
-              `Anmerkungen: ${payload.notes || ""}`,
-              "",
-              `Quelle: ${payload.utm_source || ""} / ${
-                payload.utm_medium || ""
-              } / ${payload.utm_campaign || ""}`,
-              `Referrer: ${payload.referrer || ""}`,
-              `Seite: ${payload.page_url || ""}`,
-            ].join("%0A");
-            const href = `mailto:${encodeURIComponent(
-              FALLBACK_MAIL
-            )}?subject=${subject}&body=${lines}`;
-            location.href = href;
-            hint.innerHTML =
-              '<span class="success">Danke! Falls kein Mail‑Programm öffnet, rufen Sie uns bitte direkt an.</span>';
-          }
+          // JSON POST an FormSubmit
+          const res = await fetch(SUBMIT_ENDPOINT, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) throw new Error("Serverfehler");
+          hint.innerHTML =
+            '<span class="success">Danke! Wir melden uns in Kürze.</span>';
+          form.reset();
+          $("#consent").checked = false;
         } catch (err) {
           console.error(err);
           hint.innerHTML =
