@@ -855,12 +855,12 @@
         let ok = true;
         const name = form.name.value.trim();
         const phone = form.phone.value.trim();
-        const zip = form.zip.value.trim();
+        // const zip = form.zip.value.trim();
         const consent = $("#consent").checked;
 
         setErr("name", "");
         setErr("phone", "");
-        setErr("zip", "");
+        // setErr("zip", "");
         setErr("consent", "");
 
         if (!name) {
@@ -871,10 +871,10 @@
           setErr("phone", "Bitte Telefonnummer prüfen.");
           ok = false;
         }
-        if (!/^[0-9]{5}$/.test(zip)) {
-          setErr("zip", "Bitte 5‑stellige PLZ eingeben.");
-          ok = false;
-        }
+        // if (!/^[0-9]{5}$/.test(zip)) {
+        //   setErr("zip", "Bitte 5‑stellige PLZ eingeben.");
+        //   ok = false;
+        // }
         if (!consent) {
           setErr("consent", "Bitte Einwilligung bestätigen.");
           ok = false;
